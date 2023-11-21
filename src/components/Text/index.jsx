@@ -1,0 +1,101 @@
+import React from "react";
+
+const sizeClasses = {
+  txtAliceRegular64: "font-alice font-normal",
+  txtInterRegular15Gray600: "font-inter font-normal",
+  txtInterRegular14Gray5001: "font-inter font-normal",
+  txtArimaMaduraiRegular96: "font-arimamadurai font-normal",
+  txtInterRegular20: "font-inter font-normal",
+  txtInterRegular18Bluegray90001: "font-inter font-normal",
+  txtInterRegular15WhiteA700: "font-inter font-normal",
+  txtPoppinsRegular20Blue5002: "font-normal font-poppins",
+  txtPoppinsRegular1166: "font-normal font-poppins",
+  txtPoppinsRegular16WhiteA700: "font-normal font-poppins",
+  txtInterSemiBold34Gray5001: "font-inter font-semibold",
+  txtPoppinsRegular32: "font-normal font-poppins",
+  txtPoppinsRegular16Green800: "font-normal font-poppins",
+  txtPoppinsMedium20WhiteA700: "font-medium font-poppins",
+  txtInterSemiBold32: "font-inter font-semibold",
+  txtPoppinsMedium20Bluegray40001: "font-medium font-poppins",
+  txtInterRegular14Gray50a2: "font-inter font-normal",
+  txtPoppinsRegular1516: "font-normal font-poppins",
+  txtInterRegular14Deeporange300: "font-inter font-normal",
+  txtInterRegular16Gray90002: "font-inter font-normal",
+  txtInterRegular24: "font-inter font-normal",
+  txtInterRegular15Black900: "font-inter font-normal",
+  txtInterRegular28: "font-inter font-normal",
+  txtInterSemiBold15IndigoA700: "font-inter font-semibold",
+  txtPoppinsMedium1651: "font-medium font-poppins",
+  txtInterSemiBold16Gray5001: "font-inter font-semibold",
+  txtAliceRegular64Black900: "font-alice font-normal",
+  txtInterBold15: "font-bold font-inter",
+  txtInterSemiBold34: "font-inter font-semibold",
+  txtInterBold10: "font-bold font-inter",
+  txtPoppinsRegular16: "font-normal font-poppins",
+  txtPoppinsRegular1399: "font-normal font-poppins",
+  txtPoppinsRegular24: "font-normal font-poppins",
+  txtPoppinsRegular20Gray400: "font-normal font-poppins",
+  txtPoppinsMedium20: "font-medium font-poppins",
+  txtPoppinsRegular20: "font-normal font-poppins",
+  txtInterRegular12: "font-inter font-normal",
+  txtInterRegular13: "font-inter font-normal",
+  txtInterRegular14: "font-inter font-normal",
+  txtInterRegular16Bluegray40002: "font-inter font-normal",
+  txtInterRegular15: "font-inter font-normal",
+  txtInterRegular16: "font-inter font-normal",
+  txtInterRegular18: "font-inter font-normal",
+  txtInterRegular15Gray60001: "font-inter font-normal",
+  txtPoppinsMedium20Gray700: "font-medium font-poppins",
+  txtInterRegular16Gray500: "font-inter font-normal",
+  txtInterRegular14Black900: "font-inter font-normal",
+  txtPoppinsRegular24WhiteA700: "font-normal font-poppins",
+  txtAliceRegular40: "font-alice font-normal",
+  txtInterRegular14Bluegray400: "font-inter font-normal",
+  txtAliceRegular64WhiteA700: "font-alice font-normal",
+  txtInterRegular24Bluegray800: "font-inter font-normal",
+  txtInterRegular18Bluegray900: "font-inter font-normal",
+  txtInterRegular16Indigo400: "font-inter font-normal",
+  txtPoppinsMedium20Bluegray90001: "font-medium font-poppins",
+  txtInterBold42: "font-bold font-inter",
+  txtPoppinsMedium20Bluegray90002: "font-medium font-poppins",
+  txtInterRegular16Black900: "font-inter font-normal",
+  txtInterRegular14Indigo400: "font-inter font-normal",
+  txtCantoraOneRegular96: "font-cantoraone font-normal",
+  txtInterRegular16Bluegray800: "font-inter font-normal",
+  txtInterRegular16WhiteA700: "font-inter font-normal",
+  txtPoppinsRegular1516Gray800: "font-normal font-poppins",
+  txtInterRegular32: "font-inter font-normal",
+  txtInterRegular16Bluegray400: "font-inter font-normal",
+  txtInterSemiBold15: "font-inter font-semibold",
+  txtLavishlyYoursRegular32: "font-lavishlyyours font-normal",
+  txtInterSemiBold12: "font-inter font-semibold",
+  txtInterSemiBold18: "font-inter font-semibold",
+  txtPoppinsSemiBold48Deeppurple900: "font-poppins font-semibold",
+  txtInterSemiBold16: "font-inter font-semibold",
+  txtInterBold10IndigoA700: "font-bold font-inter",
+  txtPoppinsSemiBold48: "font-poppins font-semibold",
+  txtPoppinsRegular1689: "font-normal font-poppins",
+  txtInterRegular18Gray70001: "font-inter font-normal",
+  txtPoppinsMedium40: "font-medium font-poppins",
+  txtInterSemiBold20: "font-inter font-semibold",
+  txtInknutAntiquaBold42: "font-bold font-inknutantiqua",
+  txtAliceRegular40WhiteA700: "font-alice font-normal",
+  txtInterRegular36: "font-inter font-normal",
+  txtPoppinsRegular20Gray900: "font-normal font-poppins",
+  txtPoppinsRegular16Gray80001: "font-normal font-poppins",
+};
+
+const Text = ({ children, className = "", size, as, ...restProps }) => {
+  const Component = as || "p";
+
+  return (
+    <Component
+      className={`text-left ${className} ${size && sizeClasses[size]}`}
+      {...restProps}
+    >
+      {children}
+    </Component>
+  );
+};
+
+export { Text };
